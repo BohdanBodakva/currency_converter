@@ -1,0 +1,30 @@
+.page-div{
+    width: 100%;
+    height: 100vh;
+    border: 2px solid green;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    margin-top: 175px;
+    width: fit-content;
+    margin-left: 450px;
+    padding: 40px;
+}
+
+.center-block{
+    display: flex;
+    flex-direction: row;
+}
+
+.convert-image{
+    margin-left: 55px;
+    margin-right: 55px;
+}
+
+.convert-image img{
+    width: 50px;
+}

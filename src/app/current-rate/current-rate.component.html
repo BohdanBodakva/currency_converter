@@ -1,0 +1,29 @@
+<div class="current-rate-div">
+    <div class="container">
+        <div class="usd">
+            <div class="usa-flag">
+                <img src="assets/flags/UAH.png">                
+            </div>
+            <p class="base-currency">{{this.currencyRateService.baseCurrency}}</p>
+            <div class="usd-rate">
+                <p>1</p>
+            </div>
+        </div>
+        <div class="equal-to">
+            <p>=</p>
+        </div>
+        <div class="select-currency">
+            <div class="currency-rate">
+                <p>{{this.currencyRateService.current_rates.get(this.currencyRateService.currentCurrency)}}</p>
+            </div>
+            <select [(ngModel)]="this.currencyRateService.currentCurrency">
+                <option *ngFor="let currency of this.currencyRateService.currencyNamingsForCurrentRate; let i = index">
+                    {{currency}}
+                </option>
+            </select>
+            <div class="flag">
+                <img [src]="'assets/flags/' + this.currencyRateService.currentCurrency + '.png'">
+            </div>
+        </div>
+    </div>
+</div>

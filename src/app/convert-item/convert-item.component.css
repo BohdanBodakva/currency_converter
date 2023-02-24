@@ -1,0 +1,55 @@
+.convert-item-div{
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.field{
+    display: flex;
+
+}
+
+.field input{
+    width: 90px;
+    height: 35px;
+    text-indent: 5px;
+}
+
+.field img{
+    width: 37px;
+    height: 37px;
+    margin-left: 15px;
+}
+
+.currency{
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+    height: 40px;
+}
+
+.currency-name{
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.flag img{
+    width: 55px;
+    height: 30px;
+    
+}
+
+.flag{
+    display: flex;
+    justify-content: center;
+}

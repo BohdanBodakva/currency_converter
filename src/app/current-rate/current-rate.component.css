@@ -1,0 +1,31 @@
+img{
+    width: 60px;
+    height: 34px;
+}
+
+.current-rate-div{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    border: 2px solid black;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.usd, .select-currency{
+    display: flex;
+    flex-direction: row;
+}
+
+select{
+    height: fit-content;
+}
+
+.base-currency, .usd-rate{
+    display: flex;
+    justify-content: center;
+}
