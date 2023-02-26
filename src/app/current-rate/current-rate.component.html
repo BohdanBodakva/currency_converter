@@ -1,27 +1,30 @@
+<div class="title">
+    Current rates
+</div>
 <div class="current-rate-div">
     <div class="container">
-        <div class="usd">
-            <div class="usa-flag">
-                <img src="assets/flags/UAH.png">                
+        <div class="uah">
+            <div class="uah-flag m-r m-t">
+                <img src="assets/flags/UAH.png">
             </div>
-            <p class="base-currency">{{this.currencyRateService.baseCurrency}}</p>
-            <div class="usd-rate">
+            <p class="base-currency m-r">{{this.currencyRateService.baseCurrency}}</p>
+            <div class="uah-rate m-r">
                 <p>1</p>
             </div>
         </div>
-        <div class="equal-to">
+        <div class="equal-to m-r">
             <p>=</p>
         </div>
         <div class="select-currency">
-            <div class="currency-rate">
-                <p>{{this.currencyRateService.current_rates.get(this.currencyRateService.currentCurrency)}}</p>
+            <div class="currency-rate m-r">
+                <p>{{this.currencyRateService.currentRates.get(this.currencyRateService.currentCurrency)}}</p>
             </div>
-            <select [(ngModel)]="this.currencyRateService.currentCurrency">
+            <select class="m-r" [(ngModel)]="this.currencyRateService.currentCurrency">
                 <option *ngFor="let currency of this.currencyRateService.currencyNamingsForCurrentRate; let i = index">
                     {{currency}}
                 </option>
             </select>
-            <div class="flag">
+            <div class="flag m-t">
                 <img [src]="'assets/flags/' + this.currencyRateService.currentCurrency + '.png'">
             </div>
         </div>

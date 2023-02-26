@@ -26,10 +26,10 @@ export class ConvertItemComponent {
     let leftValue = this.convertService.leftField
 
     let leftCurrency = this.convertService.leftCurrency
-    let leftCurrencyRate = this.currencyRateService.current_rates.get(leftCurrency)
+    let leftCurrencyRate = this.currencyRateService.currentRates.get(leftCurrency)
 
     let rightCurrency = this.convertService.rightCurrency
-    let rightCurrencyRate = this.currencyRateService.current_rates.get(rightCurrency)
+    let rightCurrencyRate = this.currencyRateService.currentRates.get(rightCurrency)
 
     this.convertService.rightField = leftValue / leftCurrencyRate! * rightCurrencyRate!
   }
@@ -38,10 +38,10 @@ export class ConvertItemComponent {
     let rightValue = this.convertService.rightField
 
     let leftCurrency = this.convertService.leftCurrency
-    let leftCurrencyRate = this.currencyRateService.current_rates.get(leftCurrency)
+    let leftCurrencyRate = this.currencyRateService.currentRates.get(leftCurrency)
 
     let rightCurrency = this.convertService.rightCurrency
-    let rightCurrencyRate = this.currencyRateService.current_rates.get(rightCurrency)
+    let rightCurrencyRate = this.currencyRateService.currentRates.get(rightCurrency)
 
     this.convertService.leftField = rightValue / rightCurrencyRate! * leftCurrencyRate!
   }

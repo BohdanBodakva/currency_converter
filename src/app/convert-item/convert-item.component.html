@@ -29,10 +29,10 @@
             <img *ngIf="!isConvertItemLeft" src="https://openclipart.org/image/800px/310679" (click)="clearRightInputField()">
         </div>
         <div *ngIf="isConvertItemLeft" class="btn">
-            <button (click)="convertIntoRightInput()">Convert</button>
+            <button class="butt" (click)="convertIntoRightInput()">Convert</button>
         </div>
         <div *ngIf="!isConvertItemLeft" class="btn">
-            <button (click)="convertIntoLeftInput()">Convert</button>
+            <button class="butt" (click)="convertIntoLeftInput()">Convert</button>
         </div>
     </div>
 </div>
