@@ -1,0 +1,38 @@
+<div class="convert-item-div">
+    <div class="container">
+        <div class="field">
+            <div class="currency">
+                <div *ngIf="isConvertItemLeft" class="flag">
+                    <img [src]="'assets/flags/' + this.convertService.leftCurrency + '.png'">
+                </div>
+                <div *ngIf="!isConvertItemLeft" class="flag">
+                    <img [src]="'assets/flags/' + this.convertService.rightCurrency + '.png'">
+                </div>
+                <div *ngIf="isConvertItemLeft" class="currency-name">
+                    <select [(ngModel)]="this.convertService.leftCurrency">
+                        <option *ngFor="let currency of this.currencyRateService.currencyNamings">
+                            {{currency}}
+                        </option>
+                    </select>
+                </div>
+                <div *ngIf="!isConvertItemLeft" class="currency-name">
+                    <select [(ngModel)]="this.convertService.rightCurrency">
+                        <option *ngFor="let currency of this.currencyRateService.currencyNamings">
+                            {{currency}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <input *ngIf="isConvertItemLeft" [(ngModel)]="this.convertService.leftField" type="number" placeholder="Enter sum...">
+            <input *ngIf="!isConvertItemLeft" [(ngModel)]="this.convertService.rightField" type="number" placeholder="Enter sum...">
+            <img *ngIf="isConvertItemLeft" src="https://openclipart.org/image/800px/310679" (click)="clearLeftInputField()">
+            <img *ngIf="!isConvertItemLeft" src="https://openclipart.org/image/800px/310679" (click)="clearRightInputField()">
+        </div>
+        <div *ngIf="isConvertItemLeft" class="btn">
+            <button class="butt" (click)="convertIntoRightInput()">Convert</button>
+        </div>
+        <div *ngIf="!isConvertItemLeft" class="btn">
+            <button class="butt" (click)="convertIntoLeftInput()">Convert</button>
+        </div>
+    </div>
+</div>

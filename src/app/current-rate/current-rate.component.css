@@ -1,0 +1,57 @@
+img {
+    width: 60px;
+    height: 34px;
+}
+
+.current-rate-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    width: fit-content;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 14px;
+}
+
+.uah,
+.select-currency {
+    display: flex;
+    flex-direction: row;
+}
+
+select {
+    height: fit-content;
+    margin-top: 16px;
+}
+
+.m-b {
+    margin-bottom: 5px;
+}
+
+.m-r {
+    margin-right: 6px;
+}
+
+.base-currency,
+.uah-rate {
+    display: flex;
+    justify-content: center;
+}
+
+.m-t {
+    margin-top: 6px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    height: 5px;
+    font-size: 19px;
+}
